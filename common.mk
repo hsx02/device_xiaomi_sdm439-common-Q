@@ -63,7 +63,11 @@ PRODUCT_PACKAGES += \
 
 # init
 PRODUCT_PACKAGES += \
-    init.qcom.rc
+    init.qcom.rc \
+    dt2w.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/bin/init.dt2w.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/init.dt2w.sh
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -91,10 +95,6 @@ PRODUCT_PACKAGES += \
 # Secure Lock
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/securelock.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/securelock.xml
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.xiaomi_sdm439
 
 # Telephony
 PRODUCT_PACKAGES += \
