@@ -207,6 +207,7 @@ on boot
     chown system system /dev/cpuset/camera-daemon
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
+    chmod 0440 /proc/net/unix
     chown system system /sys/kernel/hbtp/display_pwr
 
 # access permission for wlan
